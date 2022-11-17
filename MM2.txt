@@ -1,0 +1,8 @@
+F2AB: Assortativity of IS in promotor and reciprocal capture Hi-C
+
+ 
+We used processed Promotor Capture data from Javierre et al., 2016 (https://osf.io/u8tzp). Briefly, data were mapped to GRCh37 using the HiCUP pipeline (https://www.bioinformatics.babraham.ac.uk/projects/hicup/), and interaction confidence scores were computed using the CHiCAGO pipeline (Cairns et al., 2016). We considered the set of interactions with high confidence scores (>=5) in this paper. We then constructed a network with significant interactions using igraph R package (version 1.1.2). Each node of the network represents HindIII fragments, and edges represent a significant interaction between two HindIII fragments. We constructed three networks. One for resting CD4 T cells (naCD4) specific interactions, one for Activated CD4 T cells (aCD4) specific interactions and one by merging all significant interactions between Resting and Activated CD4 T cells.
+We used the R package igraph to analyze contact networks and visNetwork (v2.0.8) for visualization.
+
+
+We used the R package data.table to annotate HindIII fragments harbouring one or more IS (foverlaps function). Assortativity was then computed on the constructed network using the R igraph package. To give significance to computed assortativity of IS, we randomly selected the same amount of nodes as those having IS and thus computed a “control” assortativity 1000 times (bootstrapping).

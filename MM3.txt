@@ -1,0 +1,5 @@
+Average profile
+
+Boxplot associated:
+
+Normalized ChIP-seq signal using a around +/- 500bp of IS sites
